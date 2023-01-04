@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Oxygen&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Arvo:ital@1&family=Oxygen&family=Ubuntu:wght@700&display=swap');
+
+:root{
+    --main-color: rgb(255, 230, 0);
+    --black:#244361;
+    --box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Navbar*/
+header{
+    border-bottom: 1px solid black;
+    box-shadow: var(--box-shadow);
+}
+nav{
+    gap: 30px;
+}
+nav a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Abel;
+    padding: 5px;
+    border-radius: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-padding-top: 60px;
+}
+.judul{
+    transform: translate(0,10px);
+}
+.art{
+    height: 60px;
+}
+.hai{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: 7px;
+}
+header .navbar a.active,
+header .navbar a:hover{
+    box-shadow: var(--box-shadow);
+    color:rgb(236, 202, 6);
+}
+#menu-bar{
+    color: var(--main-color);
+    font-size: 25px;
+    transition: all .4s ease-in;
+}
+/*Navbar*/
+.home{
+    min-height: 100vh;
+    background: url(sawat.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.hehe{
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+.sekerip{
+    color: white;
+    font-family: Ubuntu;
+}
+.hulu button{
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+}.hulu{margin-top: 10rem;}
+
+/*Responsive*/
+@media (max-width:768px){
+    .home{
+        
+        background: url(sawat2.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    header .nav{
+        position: absolute;
+        top:100%; right: -100%;
+        width: 270px;
+        background: rgb(3, 16, 17);
+        border-top: 1px solid rgba(0,0,0,.1);
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        border-radius: 10px;
+        transition: .2s linear;
+        z-index: 100;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+    }
+
+    header .nav.active{
+        right: 2%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin:10px;
+    }
+    .bi-x-octagon{
+        color: yellow;
+        transform: rotate(180deg);
+    }
+
+}
